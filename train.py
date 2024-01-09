@@ -11,7 +11,7 @@ it saves the best model and the results in the output folder.
 
 
 Author: Mohammad Hossein Bamorovat Abadi
-Email:
+Email: m.bamorovvat@gmail.com
 License: GNU General Public License (GPL) v3.0
 """
 
