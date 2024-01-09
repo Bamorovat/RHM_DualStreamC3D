@@ -24,6 +24,11 @@ This repository is focused on training the **DualStreamC3D** and **Multiview Slo
 - `models/Multiview SlowFast`: 
     - Contains the Multiview SlowFast model.
 
+- `splitlist/`:
+    - Contains `testlist.txt`, `trainlist.txt`, and `vallist.txt`.
+    - These files list the data splits for testing, training, and validation, respectively.
+
+
 ## System Requirements
 
 - Python 3.x
@@ -46,6 +51,9 @@ This repository is focused on training the **DualStreamC3D** and **Multiview Slo
     ```bash
     pip install -r requirements.txt
     ```
+   
+3. Copy `testlist.txt`, `trainlist.txt`, and `vallist.txt` from the `splitlist/` folder to the root of the RHM dataset folder.
+
 
 ## Usage
 
