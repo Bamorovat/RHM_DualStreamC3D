@@ -1,15 +1,17 @@
 # DualStreamC3D Model Training with RHM Dataset
 
-This repository is focused on training the DualStreamC3D and Multiview SlowFast models using the RHM (Robotics Human Monitoring) dataset. It is designed for advanced video analysis in robotics, utilizing multi-view video processing.
+This repository is focused on training the **DualStreamC3D** and **Multiview SlowFast** models using the **RHM (Robot House Multiview)** dataset. It is designed for advanced video analysis in Ambient Assistive Living Environments, utilizing multi-view video processing.
+
+![RHM Dataset](RHM_sample_all.png)
 
 ## Files Description
 
 - `config.py`: 
-    - Configuration parameters for the RHM dataset.
+    - Configuration parameters for the **RHM** dataset.
     - Settings include dataset names, view types (e.g., OmniView, RobotView), and frame statuses (e.g., Normal, Subtract).
 
 - `dataloader.py`: 
-    - Data loading logic for the RHM dataset.
+    - Data loading logic for the Two view grabbing the **RHM** dataset.
     - Defines `VideoDataset` class for handling different view types and frame statuses.
 
 - `train.py`: 
@@ -78,16 +80,6 @@ organization={IARIA}
 ```
 
 
-## Contributing
-
-We welcome contributions. Please follow the project's coding style and submit pull requests for any new features or bug fixes.
-
 ## License
 
 This project is licensed under the GNU General Public License (GPL) v3.
-
-## Acknowledgments
-
-- [List any collaborators or contributors]
-- [Mention any institutional affiliations]
-- [Include any funding sources if applicable]
