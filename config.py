@@ -1,9 +1,17 @@
 """
+The Config file for the RHM dataset
+
+The Dataset list is: RHM
 The View Status list is NormalFrame, MotionAggregation, FrameVariationMapper, DifferentialMotionTrajectory,
 Normal, Subtract, OpticalFlow, MotionHistoryImages
-
 The View List is: FrontView, BackView, OmniView, RobotView
 The Model_name List is: DualStreamC3D, SlowFast_Multiview
+The Number of classes is: 14
+
+Author: Mohammad Hossein Bamorovat Abadi
+Email: m.bamorovvat@gmail.com
+
+License: GNU General Public License (GPL) v3.0
 """
 
 params = dict()

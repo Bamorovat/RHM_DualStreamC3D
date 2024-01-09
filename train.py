@@ -1,3 +1,21 @@
+"""
+This file is used to train the model
+
+You can change the configs like view1, view2, view1_status, view2_status, model_name, num_classes, epoch_num, in the
+config.py
+
+The model_name list is: DualStreamC3D, SlowFast_Multiview
+The dataset list is: RHM
+
+it saves the best model and the results in the output folder.
+
+
+Author: Mohammad Hossein Bamorovat Abadi
+Email:
+License: GNU General Public License (GPL) v3.0
+"""
+
+
 import os
 import time
 import numpy as np

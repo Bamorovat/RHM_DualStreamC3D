@@ -1,10 +1,44 @@
+"""
+This file contains the dataloader for the RHM dataset. The dataloader loads the video frames from the RHM dataset
+and performs preprocessing on them. The preprocessing includes cropping, normalizing, and converting the frames to
+tensor. The dataloader also performs data augmentation on the training set by randomly flipping the frames
+
+The RHM dataset is a multi-view dataset. The dataset contains 4 views: FrontView, BackView, OmniView, and RobotView.
+The dataset also contains 8 different frame status: NormalFrame, MotionAggregation, FrameVariationMapper,
+DifferentialMotionTrajectory, Normal, Subtract, OpticalFlow, and MotionHistoryImages. The dataset contains 14
+different classes.
+
+The dataloader takes in the following parameters:
+view1: First view type.
+view2: Second view type.
+view1_status: Frame status for view1.
+view2_status: Frame status for view2.
+split: Determines which list file to read from ('train', 'val', or 'test').
+clip_len: Number of frames per clip.
+
+
+The dataloader returns the following:
+buffer1: The video frames from view1
+buffer2: The video frames from view2
+labels: The label for the video
+
+
+Author: Mohammad Hossein Bamorovat Abadi
+Email: m.bamorovvat@gmail.com
+
+License: GNU General Public License (GPL) v3.0
+"""
+
 import os
 import torch
 import cv2
 import numpy as np
 from torch.utils.data import Dataset
 
+# change this to your own path
 Dataset_Path = '/home/abbas/RHM_full'
+
+# Debug mode for printing out information. Set to False if you don't want to debug.
 Debug = False
 
 

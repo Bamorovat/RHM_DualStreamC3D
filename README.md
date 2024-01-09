@@ -1,26 +1,31 @@
-# Multi-View Video Analysis for Robotics
+# DualStreamC3D Model Training with RHM Dataset
 
-This repository contains code for a multi-view video analysis system, specifically designed for processing the RHM (Robotics Human Monitoring) dataset in robotics applications. The system is optimized for handling video data from multiple views, enhancing the capability of performing complex visual tasks in robotic environments.
+This repository is focused on training the DualStreamC3D and Multiview SlowFast models using the RHM (Robotics Human Monitoring) dataset. It is designed for advanced video analysis in robotics, utilizing multi-view video processing.
 
 ## Files Description
 
 - `config.py`: 
-    - Configuration parameters tailored for the RHM dataset.
+    - Configuration parameters for the RHM dataset.
     - Settings include dataset names, view types (e.g., OmniView, RobotView), and frame statuses (e.g., Normal, Subtract).
 
 - `dataloader.py`: 
     - Data loading logic for the RHM dataset.
-    - Defines the `VideoDataset` class to handle various view types and frame statuses.
+    - Defines `VideoDataset` class for handling different view types and frame statuses.
 
 - `train.py`: 
-    - Training pipeline for video analysis models on the RHM dataset.
-    - Integrates model definitions, data loading, and the training process.
-    - Models include `C3D_Multiview` and `SlowFast_Multiview`.
+    - Training pipeline for the DualStreamC3D and Multiview SlowFast models.
+    - Integrates model definitions, data loading, and training loop.
+
+- `models/DualStreamC3D`: 
+    - Contains the DualStreamC3D model.
+
+- `models/Multiview SlowFast`: 
+    - Contains the Multiview SlowFast model.
 
 ## System Requirements
 
 - Python 3.x
-- PyTorch (version specifics)
+- PyTorch (specify version if needed)
 - OpenCV
 - NumPy
 - TensorBoardX
@@ -32,7 +37,7 @@ This repository contains code for a multi-view video analysis system, specifical
 
 1. Clone the repository:
     ```bash
-    git clone [repository-url]
+    git clone https://github.com/Bamorovat/RHM_DualStreamC3D.git
     ```
 
 2. Install the required packages:
@@ -42,23 +47,47 @@ This repository contains code for a multi-view video analysis system, specifical
 
 ## Usage
 
-1. Configure settings in `config.py` for the RHM dataset.
-2. Execute `train.py` to start the training on the dataset:
+1. Configure `config.py` for the RHM dataset.
+2. Execute `train.py` to train the DualStreamC3D and Multiview SlowFast models:
     ```bash
     python train.py
     ```
-3. The `VideoDataset` class from `dataloader.py` will be used for data handling.
+3. `VideoDataset` in `dataloader.py` manages data handling.
+
+## RHM Help
+
+For assistance with obtaining the **RHM** dataset, send an email to Patrick at [p.holthaus@herts.ac.uk](mailto:p.holthaus@herts.ac.uk). More information about the Robot House, where the dataset was collected, can be found at [Robot House Website](https://robothouse.herts.ac.uk/).
+
+## RHM Citation
+
+If you are using the **RHM** dataset or this code in your research, please cite the following paper:
+
+Bamorovat Abadi, M., Shahabian Alashti, M. R., Holthaus, P., Menon, C., & Amirabdollahian, F. (2023). RHM: Robot House Multi-View Human Activity Recognition Dataset. In ACHI 2023: The Sixteenth International Conference on Advances in Computer-Human Interactions. IARIA.
+
+[Paper Link](https://www.thinkmind.org/index.php?view=article&articleid=achi_2023_4_160_20077)
+
+Bibtex:
+```
+@inproceedings{bamorovat2023rhm,
+title={Rhm: Robot house multi-view human activity recognition dataset},
+author={Bamorovat Abadi, Mohammad and Shahabian Alashti, Mohamad Reza and Holthaus, Patrick and Menon, Catherine and Amirabdollahian, Farshid},
+booktitle={ACHI 2023: The Sixteenth International Conference on Advances in Computer-Human Interactions},
+year={2023},
+organization={IARIA}
+}
+```
+
 
 ## Contributing
 
-Contributions to this project are welcome. Please adhere to the project's coding style and submit pull requests for any new features or bug fixes.
+We welcome contributions. Please follow the project's coding style and submit pull requests for any new features or bug fixes.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the GNU General Public License (GPL) v3.
 
 ## Acknowledgments
 
-- [Any collaborators or contributors]
-- [Institutional affiliations, if any]
-- [Funding sources, if any]
+- [List any collaborators or contributors]
+- [Mention any institutional affiliations]
+- [Include any funding sources if applicable]
