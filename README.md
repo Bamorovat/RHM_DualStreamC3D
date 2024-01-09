@@ -32,7 +32,7 @@ This repository is focused on training the **DualStreamC3D** and **Multiview Slo
 ## System Requirements
 
 - Python 3.x
-- PyTorch (specify version if needed)
+- PyTorch
 - OpenCV
 - NumPy
 - TensorBoardX
